@@ -33,13 +33,9 @@ ToDo Mobx
 
 <h1 align="center">
     <img alt="" title="" src="https://github.com/Sthaynny/images/blob/main/clean_architecture/image_01.jpeg?raw=true" height="400" />  
-    <img alt="" title="" src="https://github.com/Sthaynny/images/blob/main/clean_architecture/image_02.jpeg?raw=true" height="400" />  
-    <video width="320" height="240" controls="controls" autoplay="autoplay">
-        <source src="https://github.com/Sthaynny/images/blob/main/clean_architecture/video_01.mp4?raw=true" type="video/mp4">
-        <object data="" height="400">
-        <embed height="400" src="https://github.com/Sthaynny/images/blob/main/clean_architecture/video_01.mp4?raw=true">
-        </object>
-    </video>
+    <img alt="" title="" src="https://github.com/Sthaynny/images/blob/main/clean_architecture/image_02.jpeg?raw=true" height="400" />    
+    <img alt="" title="" src="https://github.com/Sthaynny/images/blob/main/clean_architecture/gif_01.gif?raw=true" height="400" />  
+
 
 <br>
 
