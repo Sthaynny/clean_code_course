@@ -32,10 +32,9 @@ ToDo Mobx
 </p>
 
 <h1 align="center">
-    <img alt="" title="" src="https://raw.githubusercontent.com/Sthaynny/images/main/.github/clean_architecture/images/image_01.jpg" height="400" />  
-    <img alt="" title="" src="https://raw.githubusercontent.com/Sthaynny/images/main/.github/clean_architecture/images/image_02.jpg" height="400" />  
-    <img alt="" title="" src="https://raw.githubusercontent.com/Sthaynny/images/main/.github/clean_architecture/images/video_01.jpg" height="400" />  
-<h1>
+    <img alt="" title="" src="https://github.com/Sthaynny/images/blob/main/clean_architecture/image_01.jpeg?raw=true" height="400" />  
+    <img alt="" title="" src="https://github.com/Sthaynny/images/blob/main/clean_architecture/video_01.mp4?raw=true" height="400" />  
+    <video src="video/demo.mp4" height="400" ></video>
 
 <br>
 
