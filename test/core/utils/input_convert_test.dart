@@ -1,4 +1,5 @@
 import 'package:clean_code_course/core/utils/input_converter.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -17,7 +18,7 @@ void main() {
         // act
         final result = inputConverter.stringToUnsignedInteger(str);
         // assert
-        expect(result, 123);
+        expect(result.fold(id, id), equals(123));
       },
     );
   });
@@ -30,7 +31,7 @@ void main() {
       // act
       final result = inputConverter.stringToUnsignedInteger(str);
       // assert
-      expect(result, InvalidInputFailure());
+      expect(result.fold(id, id), equals(InvalidInputFailure()));
     },
   );
   test(
@@ -41,7 +42,7 @@ void main() {
       // act
       final result = inputConverter.stringToUnsignedInteger(str);
       // assert
-      expect(result, InvalidInputFailure());
+      expect(result.fold(id, id), equals(InvalidInputFailure()));
     },
   );
 }

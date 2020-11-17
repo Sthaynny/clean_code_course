@@ -35,7 +35,7 @@ void main() {
 
       //afirmar
 
-      expect(result, tNumberTrivia);
+      expect(result.fold(id, id), equals(tNumberTrivia));
       verify(repositoryMock.getConcreteNumberTrivia(tnumber));
       verifyNoMoreInteractions(repositoryMock);
     },
