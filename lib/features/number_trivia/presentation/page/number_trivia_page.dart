@@ -1,4 +1,4 @@
-import 'package:clean_code_course/features/number_trivia/presentation/bloc/bloc/number_trivia_bloc.dart';
+import 'package:clean_code_course/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 import 'package:clean_code_course/features/number_trivia/presentation/page/widgets/loading_widget.dart';
 import 'package:clean_code_course/features/number_trivia/presentation/page/widgets/message_display_widget.dart';
 import 'package:clean_code_course/features/number_trivia/presentation/page/widgets/trivia_controls_widget.dart';

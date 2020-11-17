@@ -1,4 +1,4 @@
-import 'package:clean_code_course/features/number_trivia/presentation/bloc/bloc/number_trivia_bloc.dart';
+import 'package:clean_code_course/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
