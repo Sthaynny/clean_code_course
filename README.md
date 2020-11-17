@@ -61,6 +61,21 @@ Esse projeto tem um intuito de ter uma arquitetura clean. É um estudo baseado n
 - Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
 - Faça push para a sua branch: `git push origin minha-feature`.
 
+Para ajudar a manter o padrão escolhido também criamos um arquivo que é chamado antes de todo commit. Este arquivo irá formatar e apontará (se presente) erros no codestyle do seu código. Para habilitar você deverá primeiramente copiá-lo para a pasta de hooks do git. Se estiver desenvolvendo em um macOS, vá para à raiz do projeto e execute o comando abaixo:
+
+    $ sh setup.sh
+
+Se preferir, você pode fazer isso manualmente, primeiro garanta que esteja na raiz do projeto e rode o comando abaixo:
+
+    $ cp pre-commit .git/hooks/pre-commit
+    
+Após este passo, é necessário dar permissão para que o arquivo seja executado. Basta seguir o seguinte comando:
+
+    $ chmod +x .git/hooks/pre-commit
+    
+Agora, todo commit que for dado neste projeto, independente de ser em uma ferramenta de UI ou na linha de comando, passará primeiro pela formatação e depois pela análise do linter. Caso tudo esteja ok, o commit será realizado normalmente, caso contrário não será efetivado.
+**Curiosidade:** Por baixo dos panos este script basicamente usa as ferramentas de formatação e análise de código do Dart.
+
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
 ## :memo: Licença
