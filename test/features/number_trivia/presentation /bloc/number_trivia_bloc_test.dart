@@ -40,8 +40,8 @@ void main() {
   });
 
   group('GetTriviaForConcreteNumber', () {
-    final tNumberString = '1';
-    final tNumberParsed = 1;
+    const tNumberString = '1';
+    const tNumberParsed = 1;
     final tNumberTrivia = NumberTrivia(number: 1, text: 'test trivia');
 
     void setUpMockInputConverterSuccess() =>
@@ -69,7 +69,7 @@ void main() {
             .thenReturn(Left(InvalidInputFailure()));
         // assert later
         final expected = [
-          Error(message: INVALID_INPUT_FAILURE_MESSAGE),
+          Error(message: invalidInputFailureMessage),
         ];
         expectLater(bloc, emitsInOrder(expected));
         // act
@@ -120,7 +120,7 @@ void main() {
         // assert later
         final expected = [
           Loading(),
-          Error(message: SERVER_FAILURE_MESSAGE),
+          Error(message: serverFailureMessage),
         ];
         expectLater(bloc, emitsInOrder(expected));
         // act
@@ -138,7 +138,7 @@ void main() {
         // assert later
         final expected = [
           Loading(),
-          Error(message: CACHE_FAILURE_MESSAGE),
+          Error(message: cacheFailureMessage),
         ];
         expectLater(bloc, emitsInOrder(expected));
         // act
@@ -190,7 +190,7 @@ void main() {
         // assert later
         final expected = [
           Loading(),
-          Error(message: SERVER_FAILURE_MESSAGE),
+          Error(message: serverFailureMessage),
         ];
         expectLater(bloc, emitsInOrder(expected));
         // act
@@ -207,7 +207,7 @@ void main() {
         // assert later
         final expected = [
           Loading(),
-          Error(message: CACHE_FAILURE_MESSAGE),
+          Error(message: cacheFailureMessage),
         ];
         expectLater(bloc, emitsInOrder(expected));
         // act

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class NumberTrivia extends Equatable {
-  NumberTrivia({
+  const NumberTrivia({
     this.text,
     this.number,
   });

@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MessageDisplay extends StatelessWidget {
-  final String message;
-
   const MessageDisplay({
-    Key key,
     @required this.message,
-  })  : assert(message != null),
-        super(key: key);
+  }) : assert(message != null);
+  final String message;
 
   @override
   Widget build(BuildContext context) {

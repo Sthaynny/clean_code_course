@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:translator/translator.dart';
 
 class TriviaDisplay extends StatelessWidget {
-  final NumberTrivia numberTrivia;
-
   const TriviaDisplay({
+    @required this.numberTrivia,
     Key key,
-    this.numberTrivia,
   })  : assert(numberTrivia != null),
         super(key: key);
+  final NumberTrivia numberTrivia;
 
   @override
   Widget build(BuildContext context) {

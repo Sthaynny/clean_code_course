@@ -34,7 +34,7 @@ void main() {
   }
 
   group('getConcreteNumberTrivia', () {
-    final tNumber = 1;
+    const tNumber = 1;
 
     test(
       'should preform a GET request on a URL with number being the endpoint and with application/json header',

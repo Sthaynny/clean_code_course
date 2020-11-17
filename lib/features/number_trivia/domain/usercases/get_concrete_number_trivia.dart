@@ -18,9 +18,8 @@ class GetConcreteNumberTrivia implements UserCase<NumberTrivia, Params> {
 }
 
 class Params extends Equatable {
+  const Params({@required this.number});
   final int number;
-
-  Params({@required this.number});
 
   @override
   List<Object> get props => [number];

@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
-  final tNumeberTriviaModel = NumberTriviaModel(number: 1, text: "test text");
+  final tNumeberTriviaModel = NumberTriviaModel(number: 1, text: 'test text');
 
   setUp(() {});
 
@@ -51,8 +51,8 @@ void main() {
       //afirmar
 
       final mapExpect = {
-        "text": "test text",
-        "number": 1,
+        'text': 'test text',
+        'number': 1,
       };
 
       expect(result, mapExpect);

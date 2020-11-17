@@ -19,7 +19,7 @@ void main() {
     usercase = GetConcreteNumberTrivia(repositoryMock);
   });
 
-  final tnumber = 1;
+  const tnumber = 1;
   final tNumberTrivia = NumberTrivia(number: 1, text: 'test');
 
   test(
@@ -35,7 +35,7 @@ void main() {
 
       //afirmar
 
-      expect(result, Right(tNumberTrivia));
+      expect(result, tNumberTrivia);
       verify(repositoryMock.getConcreteNumberTrivia(tnumber));
       verifyNoMoreInteractions(repositoryMock);
     },

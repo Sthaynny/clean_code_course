@@ -34,7 +34,7 @@ void main() {
 
       //afirmar
 
-      expect(result, Right(tNumberTrivia));
+      expect(result, tNumberTrivia);
       verify(repositoryMock.getRandomNumberTrivia());
       verifyNoMoreInteractions(repositoryMock);
     },

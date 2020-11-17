@@ -8,9 +8,8 @@ abstract class NumberTriviaEvent extends Equatable {
 }
 
 class GetTriviaForConcreteNumber extends NumberTriviaEvent {
+  const GetTriviaForConcreteNumber(this.numberString);
   final String numberString;
-
-  GetTriviaForConcreteNumber(this.numberString);
 }
 
 class GetTriviaForRandomNumber extends NumberTriviaEvent {}

@@ -14,13 +14,11 @@ class Empty extends NumberTriviaState {}
 class Loading extends NumberTriviaState {}
 
 class Loaded extends NumberTriviaState {
+  const Loaded({@required this.trivia});
   final NumberTrivia trivia;
-
-  Loaded({@required this.trivia});
 }
 
 class Error extends NumberTriviaState {
+  const Error({@required this.message});
   final String message;
-
-  Error({@required this.message});
 }

@@ -6,7 +6,6 @@ import 'package:clean_code_course/features/number_trivia/data/datasources/number
 import 'package:clean_code_course/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:clean_code_course/features/number_trivia/data/repositories/number_trivia_repository.dart';
 import 'package:clean_code_course/features/number_trivia/domain/entities/number_trivia.dart';
-import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -57,7 +56,7 @@ void main() {
   group('getConcreteNumberTrivia', () {
     // DATA FOR THE MOCKS AND ASSERTIONS
     // We'll use these three variables throughout all the tests
-    final tNumber = 1;
+    const tNumber = 1;
     final tNumberTriviaModel =
         NumberTriviaModel(number: tNumber, text: 'test trivia');
     final NumberTrivia tNumberTrivia = tNumberTriviaModel;
@@ -86,7 +85,7 @@ void main() {
           // assert
           verifyZeroInteractions(mockRemoteDatasource);
           verify(mockLocalDatasource.getLastNumberTrivia());
-          expect(result, equals(Right(tNumberTrivia)));
+          expect(result, equals(tNumberTrivia));
         },
       );
 
@@ -101,7 +100,7 @@ void main() {
           // assert
           verifyZeroInteractions(mockRemoteDatasource);
           verify(mockLocalDatasource.getLastNumberTrivia());
-          expect(result, equals(Left(CacheFailure())));
+          expect(result, equals(CacheFailure()));
         },
       );
     });
@@ -132,7 +131,7 @@ void main() {
           final result = await repository.getRandomNumberTrivia();
           // assert
           verify(mockRemoteDatasource.getRandomNumberTrivia());
-          expect(result, equals(Right(tNumberTrivia)));
+          expect(result, equals(tNumberTrivia));
         },
       );
 
@@ -161,7 +160,7 @@ void main() {
           // assert
           verify(mockRemoteDatasource.getRandomNumberTrivia());
           verifyZeroInteractions(mockLocalDatasource);
-          expect(result, equals(Left(ServerFailure())));
+          expect(result, equals(ServerFailure()));
         },
       );
     });
@@ -178,7 +177,7 @@ void main() {
           // assert
           verifyZeroInteractions(mockRemoteDatasource);
           verify(mockLocalDatasource.getLastNumberTrivia());
-          expect(result, equals(Right(tNumberTrivia)));
+          expect(result, equals(tNumberTrivia));
         },
       );
 
@@ -193,7 +192,7 @@ void main() {
           // assert
           verifyZeroInteractions(mockRemoteDatasource);
           verify(mockLocalDatasource.getLastNumberTrivia());
-          expect(result, equals(Left(CacheFailure())));
+          expect(result, equals(CacheFailure()));
         },
       );
     });

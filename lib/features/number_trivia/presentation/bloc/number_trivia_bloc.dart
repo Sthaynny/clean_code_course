@@ -15,16 +15,13 @@ import 'package:meta/meta.dart';
 part 'number_trivia_event.dart';
 part 'number_trivia_state.dart';
 
-const String SERVER_FAILURE_MESSAGE = 'Server Failure';
-const String CACHE_FAILURE_MESSAGE = 'Cache Failure';
-const String INVALID_INPUT_FAILURE_MESSAGE =
+//invalidInputFailureMessage
+const String serverFailureMessage = 'Server Failure';
+const String cacheFailureMessage = 'Cache Failure';
+const String invalidInputFailureMessage =
     'Invalid Input - The number must be a positive integer or zero.';
 
 class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
-  final GetConcreteNumberTrivia getConcreteNumberTrivia;
-  final GetRandomNumberTrivia getRandomNumberTrivia;
-  final InputConverter inputConverter;
-
   NumberTriviaBloc({
     @required GetConcreteNumberTrivia concrete,
     @required GetRandomNumberTrivia random,
@@ -35,6 +32,9 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
         getConcreteNumberTrivia = concrete,
         getRandomNumberTrivia = random,
         super(Empty());
+  final GetConcreteNumberTrivia getConcreteNumberTrivia;
+  final GetRandomNumberTrivia getRandomNumberTrivia;
+  final InputConverter inputConverter;
 
   @override
   Stream<NumberTriviaState> mapEventToState(
@@ -46,7 +46,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
 
       yield* inputEither.fold(
         (failure) async* {
-          yield Error(message: INVALID_INPUT_FAILURE_MESSAGE);
+          yield Error(message: invalidInputFailureMessage);
         },
         (integer) async* {
           yield Loading();
@@ -74,7 +74,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
     yield failureOrTrivia.fold(
       (failure) => Error(message: _mapFailureToMessage(failure)),
       (trivia) {
-        NumberTrivia number =
+        final NumberTrivia number =
             NumberTrivia(number: trivia.number, text: portuguese);
         return Loaded(trivia: number);
       },
@@ -84,9 +84,9 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
   String _mapFailureToMessage(Failure failure) {
     switch (failure.runtimeType) {
       case ServerFailure:
-        return SERVER_FAILURE_MESSAGE;
+        return serverFailureMessage;
       case CacheFailure:
-        return CACHE_FAILURE_MESSAGE;
+        return cacheFailureMessage;
       default:
         return 'Unexpected error';
     }

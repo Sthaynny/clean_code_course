@@ -6,12 +6,12 @@ import 'package:clean_code_course/features/number_trivia/data/repositories/numbe
 import 'package:clean_code_course/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:get_it/get_it.dart';
+import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'features/number_trivia/domain/usercases/get_concrete_number_trivia.dart';
 import 'features/number_trivia/domain/usercases/get_ramdom_number_trivia.dart';
 import 'features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
-import 'package:http/http.dart' as http;
 
 final dependency = GetIt.instance;
 
