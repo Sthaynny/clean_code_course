@@ -3,11 +3,11 @@
 
 <h1 align="center">
 <img alt="" title="" src="https://cdn.icon-icons.com/icons2/572/PNG/512/1457055658_App_Development_icon-icons.com_54712.png" width="100" /><br>
-Clea code
+Clean code
   <!-- trocar: 'você pode colocar uma imagem (logo) que represente seu projeto (visualmente) -->
 </h1>
 
-<h2 align="center">Lista de tarefas</h2>
+<h2 align="center">Curiosidades sobre os numeros</h2>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Sthaynny/todo_mobx">
